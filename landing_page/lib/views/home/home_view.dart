@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/widgets/centered_view/centered_view.dart';
 import 'package:landing_page/widgets/navigation_bar/navigation_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,11 +8,13 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body:
-      Column(
-        children: <Widget>[
-          NavigationBar(),
-        ]
-      )
+      CenteredView(
+        child: Column( //TODO: Fix this parameter issue
+          children: <Widget>[
+            NavigationBar(),
+          ],
+        ),
+      ),
     );
   }
 }
