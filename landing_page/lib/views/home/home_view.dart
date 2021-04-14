@@ -11,14 +11,18 @@ class HomeView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            NavigationBar(),
             SizedBox(
               height: 100,
             ),
             Text(
-              'Hi, I\'m Firdous Nizar',
+              'spatial\nretrace',
               style: TextStyle(fontSize: 80),
-            )
+            ),
+            Text(
+              'Hi, I\'m Firdous Nizar',
+              style: TextStyle(fontSize: 24),
+            ),
+            NavigationBar(), //TODO: Check this issue of NavBar
           ],
         ),
       ),
