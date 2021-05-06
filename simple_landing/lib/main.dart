@@ -22,6 +22,21 @@ class MyApp extends StatelessWidget {
 class LinksLandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    // final height = MediaQuery.of(context).size.height;
+
+    final ButtonStyle flatButtonStyle = TextButton.styleFrom(
+      primary: Colors.white,
+      textStyle: TextStyle(
+        fontSize: 18,
+      ),
+      minimumSize: Size(width > 680 ? 680 : width * 0.95, 80),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(6.0)),
+      ),
+      backgroundColor: Colors.grey[800],
+    );
+
     return Material(
       child: Column(
         children: [
@@ -40,19 +55,28 @@ class LinksLandingPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          SizedBox(
-            height: 40,
-            child: GestureDetector(
-              onTap: () {
-                debugPrint("The button has been clicked!");
-              },
-              child: Text(
-                'Instagram',
-                style: TextStyle(
-                  color: Colors.blueGrey,
-                ),
-              ),
-            ),
+          TextButton(
+            style: flatButtonStyle,
+            onPressed: () {
+              debugPrint("TAKE ME TO INSTAGRAM!");
+            },
+            child: Text('Instagram'),
+          ),
+          SizedBox(height: 20),
+          TextButton(
+            style: flatButtonStyle,
+            onPressed: () {
+              debugPrint("TAKE ME TO TWITTER!");
+            },
+            child: Text('Twitter'),
+          ),
+          SizedBox(height: 20),
+          TextButton(
+            style: flatButtonStyle,
+            onPressed: () {
+              debugPrint("TAKE ME TO LINKEDIN!");
+            },
+            child: Text('LinkedIn'),
           ),
         ],
       ),
