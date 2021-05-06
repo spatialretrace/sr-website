@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page/widgets/navigation_bar/navigation_bar.dart';
+// import 'package:landing_page/widgets/navigation_bar/navigation_bar.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -22,7 +22,7 @@ class HomeView extends StatelessWidget {
               'Hi, I\'m Firdous Nizar',
               style: TextStyle(fontSize: 24),
             ),
-            NavigationBar(), //TODO: Check this issue of NavBar
+            // NavigationBar(), //TODO: Check this issue of NavBar
           ],
         ),
       ),
