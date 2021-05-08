@@ -54,30 +54,19 @@ class LinksLandingPage extends StatelessWidget {
               fontSize: 16,
             ),
           ),
-          SizedBox(height: 20),
-          TextButton(
+          
+          for(var link in links)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20.0),
+            TextButton(
             style: flatButtonStyle,
             onPressed: () {
-              debugPrint("TAKE ME TO INSTAGRAM!");
+              debugPrint("TAKE ME TO $link['title'] !" );
             },
-            child: Text('Instagram'),
+            child: Text('$link[\'title\']'),
           ),
-          SizedBox(height: 20),
-          TextButton(
-            style: flatButtonStyle,
-            onPressed: () {
-              debugPrint("TAKE ME TO TWITTER!");
-            },
-            child: Text('Twitter'),
           ),
-          SizedBox(height: 20),
-          TextButton(
-            style: flatButtonStyle,
-            onPressed: () {
-              debugPrint("TAKE ME TO LINKEDIN!");
-            },
-            child: Text('LinkedIn'),
-          ),
+          
         ],
       ),
     );
@@ -85,3 +74,26 @@ class LinksLandingPage extends StatelessWidget {
 }
 
 final imageUrl = 'https://avatars.githubusercontent.com/u/48064033?v=4';
+
+final links = [
+  {'title':'Instagram'},
+  {'title':'Twitter'},
+  {'title':'LinkedIn'},
+];
+
+// SizedBox(height: 20),
+//           TextButton(
+//             style: flatButtonStyle,
+//             onPressed: () {
+//               debugPrint("TAKE ME TO TWITTER!");
+//             },
+//             child: Text('Twitter'),
+//           ),
+//           SizedBox(height: 20),
+//           TextButton(
+//             style: flatButtonStyle,
+//             onPressed: () {
+//               debugPrint("TAKE ME TO LINKEDIN!");
+//             },
+//             child: Text('LinkedIn'),
+//           ),
