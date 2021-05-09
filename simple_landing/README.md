@@ -1,6 +1,13 @@
 # simple_landing
 
-A new Flutter project.
+Flutter Web project of basic landing page based on Udemy tutorial.
+
+**Last Updated**
+Friday, May 8 at 8:30pm
+
+**Screenshot**
+
+![SimpleLandingPage](screenshots/Screen Shot 2021-05-09 at 11.17.09 AM.png)
 
 ## Getting Started
 
