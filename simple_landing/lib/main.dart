@@ -1,7 +1,10 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:simple_landing/widgets/SocialMediaButton.dart';
+
 import 'package:url_launcher/url_launcher.dart';
+import 'const.dart';
 
 void main() {
   runApp(MyApp());
@@ -56,8 +59,8 @@ class LinksLandingPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          for (var link in links)
-            TestWidget(flatButtonStyle: flatButtonStyle, link: link),
+          // for (var link in links)
+          SocialMediaButton(flatButtonStyle: flatButtonStyle, links: links),
           Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -73,61 +76,3 @@ class LinksLandingPage extends StatelessWidget {
     );
   }
 }
-
-class TestWidget extends StatelessWidget {
-  const TestWidget({
-    Key? key,
-    required this.flatButtonStyle,
-    required this.link,
-  }) : super(key: key);
-
-  final ButtonStyle flatButtonStyle;
-  final Map<String, String> link;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20.0),
-      child: TextButton(
-        style: flatButtonStyle,
-        onPressed: () {
-          launch('${link['url']}');
-          debugPrint("TAKE ME TO ${link['title']} !");
-        },
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // ColorFiltered(
-            //   child:
-            Image.asset('images/${link['icon']}.png',
-                width: 24, color: Colors.white),
-            //   colorFilter: const ColorFilter.mode(Colors.white, BlendMode.color),
-            // ),
-            SizedBox(width: 8),
-            Text('${link['title']}'),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-final imageUrl = 'https://avatars.githubusercontent.com/u/48064033?v=4';
-
-final links = [
-  {
-    'title': 'Instagram',
-    'icon': 'instagram',
-    'url': 'https://www.instagram.com/spatialretrace/',
-  },
-  {
-    'title': 'Twitter',
-    'icon': 'twitter',
-    'url': 'https://twitter.com/spatialretrace',
-  },
-  {
-    'title': 'LinkedIn',
-    'icon': 'linkedin',
-    'url': 'https://www.linkedin.com/in/spatialretrace/',
-  },
-];
