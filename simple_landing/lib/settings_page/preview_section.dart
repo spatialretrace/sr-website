@@ -11,6 +11,7 @@ class PreviewSection extends StatelessWidget {
     return Expanded(
         flex: 2,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20.0),
@@ -19,22 +20,20 @@ class PreviewSection extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline6,
               ),
             ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                child: Center(
-                  child: AspectRatio(
-                    aspectRatio: 1 / 2,
-                    child: Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(width: 10.0),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30.0))),
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: LinksLandingPage(),
-                        )),
-                  ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+              child: Center(
+                child: AspectRatio(
+                  aspectRatio: 1 / 2,
+                  child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 10.0),
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(30.0))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: LinksLandingPage(),
+                      )),
                 ),
               ),
             ),

@@ -11,7 +11,7 @@ Home
 ![Home of SimpleLandingPage](screenshots/01_May9.png)
 
 Settings
-![Settings of SimpleLandingPage](screenshots/01_Settings_May10.png)
+![Settings of SimpleLandingPage](screenshots/02_Settings_May10.png)
 
 ## Getting Started
 

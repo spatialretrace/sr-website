@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_landing/settings_page/link_button_settings.dart';
 import 'package:simple_landing/settings_page/preview_section.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -6,11 +7,7 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(children: [
-        Expanded(
-            flex: 3,
-            child: Container(
-              color: Colors.blueGrey.shade50,
-            )),
+        LinkButtonSettings(),
         PreviewSection(),
       ]),
     );
