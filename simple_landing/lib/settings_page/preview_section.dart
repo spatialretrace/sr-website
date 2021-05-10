@@ -20,7 +20,23 @@ class PreviewSection extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: LinksLandingPage(),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                child: Center(
+                  child: AspectRatio(
+                    aspectRatio: 1 / 2,
+                    child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 10.0),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(30.0))),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: LinksLandingPage(),
+                        )),
+                  ),
+                ),
+              ),
             ),
             SizedBox(
               height: 100.0,
