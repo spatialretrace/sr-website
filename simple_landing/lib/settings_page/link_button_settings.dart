@@ -50,8 +50,7 @@ class LinkButtonSettings extends StatelessWidget {
                                 const EdgeInsets.symmetric(vertical: 8.0),
                             key: Key('${link['title']}'),
                             title: Text('${link['title']}'),
-                            leading: Icon(Icons.drag_indicator),
-                            trailing: Row(
+                            leading: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 IconButton(
