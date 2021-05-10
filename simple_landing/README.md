@@ -3,11 +3,15 @@
 Flutter Web project of basic landing page based on Udemy tutorial.
 
 **Last Updated**
-Friday, May 9 at 12:23pm
+Monday, May 10 at 2:34pm
 
 **Screenshot**
 
-![SimpleLandingPage](screenshots/01_May9.png)
+Home
+![Home of SimpleLandingPage](screenshots/01_May9.png)
+
+Settings
+![Settings of SimpleLandingPage](screenshots/00_Settings_May10.png)
 
 ## Getting Started
 

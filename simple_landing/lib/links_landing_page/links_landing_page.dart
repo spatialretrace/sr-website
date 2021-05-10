@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_landing/widgets/footer.dart';
+import 'package:simple_landing/links_landing_page/footer.dart';
 import 'package:simple_landing/widgets/social_media_button.dart';
 
 import '../const.dart';
@@ -7,23 +7,22 @@ import '../const.dart';
 class LinksLandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    // final height = MediaQuery.of(context).size.height;
+    return LayoutBuilder(builder: (context, constraints) {
+      final width = constraints.maxWidth;
 
-    final ButtonStyle flatButtonStyle = TextButton.styleFrom(
-      primary: Colors.white,
-      textStyle: TextStyle(
-        fontSize: 18,
-      ),
-      minimumSize: Size(width > 680 ? 680 : width * 0.95, 80),
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(6.0)),
-      ),
-      backgroundColor: Colors.grey[800],
-    );
+      final ButtonStyle flatButtonStyle = TextButton.styleFrom(
+        primary: Colors.white,
+        textStyle: TextStyle(
+          fontSize: 18,
+        ),
+        minimumSize: Size(width > 680 ? 680 : width * 0.95, 80),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(6.0)),
+        ),
+        backgroundColor: Colors.grey[800],
+      );
 
-    return Material(
-      child: Column(
+      return Column(
         children: [
           SizedBox(height: 35),
           CircleAvatar(
@@ -33,6 +32,7 @@ class LinksLandingPage extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Text(
+            //TODO: Fix text theme here
             '@spatialretrace',
             style: TextStyle(
               color: Colors.grey,
@@ -46,7 +46,7 @@ class LinksLandingPage extends StatelessWidget {
           Footer(),
           SizedBox(height: 20),
         ],
-      ),
-    );
+      );
+    });
   }
 }

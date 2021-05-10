@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_landing/settings_page/preview_section.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -10,11 +11,7 @@ class SettingsPage extends StatelessWidget {
             child: Container(
               color: Colors.blueGrey.shade50,
             )),
-        Expanded(
-            flex: 2,
-            child: Container(
-              color: Colors.white,
-            )),
+        PreviewSection(),
       ]),
     );
   }

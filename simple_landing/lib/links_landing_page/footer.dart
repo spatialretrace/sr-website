@@ -10,7 +10,10 @@ class Footer extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('Built in Flutter'),
+        Text(
+          'Built in Flutter',
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
         SizedBox(width: 8),
         FlutterLogo(),
       ],
