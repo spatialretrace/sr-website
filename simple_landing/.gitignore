@@ -8,6 +8,8 @@
 .buildlog/
 .history
 .svn/
+node_modules/
+package-lock.json
 
 # IntelliJ related
 *.iml
