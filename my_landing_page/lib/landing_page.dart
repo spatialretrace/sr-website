@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/hi_intro.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -6,12 +7,7 @@ class LandingPage extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          Expanded(
-            flex: 3,
-            child: Container(
-              color: Colors.amber,
-            ),
-          ),
+          HiIntro(),
           Expanded(
             flex: 2,
             child: Container(
