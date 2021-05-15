@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/intro_text.dart';
-import 'package:my_landing_page/social_media_icons.dart';
+import 'package:my_landing_page/social_media.dart';
 
 class HiIntro extends StatelessWidget {
   const HiIntro({
@@ -28,7 +28,16 @@ class HiIntro extends StatelessWidget {
           ),
           Expanded(
             flex: 2,
-            child: SocialMediaIcons(),
+            child: SocialMedia(),
+          ),
+          Container(
+            alignment: Alignment.bottomLeft,
+            padding: EdgeInsets.all(10),
+            child: Text('© 2021, Built with Flutter',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                )),
           )
         ],
       ),
