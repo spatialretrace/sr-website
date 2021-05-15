@@ -10,7 +10,6 @@ class IntroText extends StatelessWidget {
     @required this.lineSpacing2,
     @required this.fontSize1,
     @required this.fontSize2,
-    @required this.leftPadding,
     @required this.fontWeight,
     @required this.letterSpace,
   }) : super(key: key);
@@ -18,7 +17,6 @@ class IntroText extends StatelessWidget {
   final Color textColor1, textColor2;
   final double lineSpacing1, lineSpacing2;
   final double fontSize1, fontSize2;
-  final int leftPadding;
   final FontWeight fontWeight;
   final double letterSpace;
   final String fontFam;
@@ -27,9 +25,10 @@ class IntroText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: 150),
+      alignment: Alignment.bottomLeft,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text(
             'Hi, I\'m',
