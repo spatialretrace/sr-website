@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SocialMediaButton extends StatelessWidget {
   const SocialMediaButton({
@@ -28,7 +29,7 @@ class SocialMediaButton extends StatelessWidget {
         ),
         onPressed: () {
           debugPrint("TAKE ME TO $socialMedia!");
-          // launch(socialURL);
+          launch(socialURL);
         },
         padding: EdgeInsets.all(15.0),
         shape: CircleBorder(),

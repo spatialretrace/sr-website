@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/home_page.dart';
 import 'package:my_landing_page/landing_page.dart';
 
 void main() {
@@ -14,7 +15,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LandingPage(),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => LandingPage(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }

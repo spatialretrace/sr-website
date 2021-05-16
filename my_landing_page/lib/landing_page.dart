@@ -6,6 +6,13 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/BG_Landing.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        // color: Colors.amber,
         child: Row(
           children: [
             Expanded(
