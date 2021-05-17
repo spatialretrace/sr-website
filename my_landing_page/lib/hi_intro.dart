@@ -10,13 +10,6 @@ class HiIntro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // decoration: BoxDecoration(
-      //   image: DecorationImage(
-      //     image: AssetImage("assets/asset.JPG"),
-      //     fit: BoxFit.cover,
-      //   ),
-      // ),
-      // color: Colors.amber,
       child: Column(
         children: [
           Expanded(

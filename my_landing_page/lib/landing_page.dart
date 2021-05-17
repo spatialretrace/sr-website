@@ -8,8 +8,9 @@ class LandingPage extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
+            alignment: Alignment(-5.5, 0),
             image: AssetImage("assets/BG_Landing.jpg"),
-            fit: BoxFit.cover,
+            fit: BoxFit.fitHeight,
           ),
         ),
         // color: Colors.amber,
