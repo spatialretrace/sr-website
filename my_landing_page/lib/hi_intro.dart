@@ -9,6 +9,9 @@ class HiIntro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    // final double height = MediaQuery.of(context).size.height;
+
     return Container(
       child: Column(
         children: [
@@ -20,7 +23,7 @@ class HiIntro extends StatelessWidget {
                 textColor2: Colors.white,
                 lineSpacing1: 14,
                 lineSpacing2: 10,
-                fontSize1: 30,
+                fontSize1: width < 1280 ? 30 : width * 0.02,
                 fontSize2: 64,
                 fontWeight: FontWeight.w100,
                 letterSpace: 2),

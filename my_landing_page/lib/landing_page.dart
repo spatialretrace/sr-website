@@ -4,30 +4,37 @@ import 'package:my_landing_page/hi_intro.dart';
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.width;
     return Material(
-      child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            alignment: Alignment(-5.5, 0),
-            image: AssetImage("assets/BG_Landing.jpg"),
-            fit: BoxFit.fitHeight,
+      child: Stack(
+        children: [
+          Container(
+            color: Colors.amber,
           ),
-        ),
-        // color: Colors.amber,
-        child: Row(
-          children: [
-            Expanded(
-              flex: 3,
-              child: HiIntro(),
+          Positioned(
+            child: Image.asset(
+              "assets/BG_Landing.jpg",
+              width: width * 0.80,
+              height: height,
+              // fit: BoxFit.fitHeight,
             ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                color: Colors.white,
+          ),
+          Row(
+            children: [
+              Expanded(
+                flex: 3,
+                child: HiIntro(),
               ),
-            ),
-          ],
-        ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
