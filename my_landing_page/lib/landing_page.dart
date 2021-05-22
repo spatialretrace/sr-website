@@ -4,32 +4,47 @@ import 'package:my_landing_page/hi_intro.dart';
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-    final double height = MediaQuery.of(context).size.width;
+    // final double width = MediaQuery.of(context).size.width;
+    // final double height = MediaQuery.of(context).size.width;
     return Material(
       child: Stack(
         children: [
-          Container(
-            color: Colors.amber,
+          Expanded(
+            child: Container(
+              color: Colors.amber,
+            ),
           ),
-          Positioned(
+          Expanded(
             child: Image.asset(
               "assets/BG_Landing.jpg",
-              width: width * 0.80,
-              height: height,
-              // fit: BoxFit.fitHeight,
+              // width: width,
+              // height: height,
+              // alignment: Alignment(-width * 0.5, 0),
+              // fit: BoxFit.cover,
             ),
           ),
           Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Expanded(
-                flex: 3,
+                // alignment: Alignment.centerLeft,
+                flex: 4,
                 child: HiIntro(),
               ),
               Expanded(
-                flex: 2,
-                child: Container(
-                  color: Colors.white,
+                flex: 5,
+                child: GestureDetector(
+                  child: Image.asset(
+                    "assets/WhiteButtonSlider.png",
+                    // alignment: Alignment.centerRight,
+                    // // width: width * 2,
+                    // height: height,
+                    fit: BoxFit.fill,
+                  ),
+                  onTap: () {
+                    debugPrint("GO TO HOMEPAGE!!");
+                  },
                 ),
               ),
             ],

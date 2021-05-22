@@ -11,10 +11,77 @@ class HiIntro extends StatelessWidget {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     // final double height = MediaQuery.of(context).size.height;
-
     return Container(
       child: Column(
         children: [
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.only(left: 150, top: 100),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  TextButton(
+                    onPressed: () {
+                      debugPrint("ROUTING TO ABOUT PAGE!!");
+                    },
+                    child: Text(
+                      'ABOUT',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Futura',
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                    style: TextButton.styleFrom(
+                      shadowColor: Colors.black,
+                      elevation: 5.0,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      debugPrint("ROUTING TO WORK PAGE!!");
+                    },
+                    child: Text(
+                      'WORK',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Futura',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                    style: TextButton.styleFrom(
+                      shadowColor: Colors.black,
+                      elevation: 5.0,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      debugPrint("ROUTING TO CONTACT PAGE!!");
+                    },
+                    child: Text(
+                      'CONTACT',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Futura',
+                        fontWeight: FontWeight.w200,
+                      ),
+                    ),
+                    style: TextButton.styleFrom(
+                      shadowColor: Colors.black,
+                      elevation: 5.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
           Expanded(
             flex: 3,
             child: IntroText(
