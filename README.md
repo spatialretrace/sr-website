@@ -3,4 +3,10 @@ Working on Web Design of Architecture and Design Blog, "[Spatial Retrace](https:
 
 ### Screenshot
 
+**LANDING**
+
 ![my_landing_page](screenshots/04_landing.png)
+
+**WORK**
+
+![work_page](screenshots/00_work.gif)

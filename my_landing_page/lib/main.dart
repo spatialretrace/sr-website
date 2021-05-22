@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_landing_page/home_page.dart';
+import 'package:my_landing_page/work_page.dart';
 import 'package:my_landing_page/landing_page.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => LandingPage(),
         // When navigating to the "/second" route, build the SecondScreen widget.
-        '/home': (context) => HomePage(),
+        '/work': (context) => WorkPage(),
       },
     );
   }

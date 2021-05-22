@@ -43,7 +43,7 @@ class LandingPage extends StatelessWidget {
                     fit: BoxFit.fill,
                   ),
                   onTap: () {
-                    debugPrint("GO TO HOMEPAGE!!");
+                    debugPrint("GO TO WORK PAGE!!");
                   },
                 ),
               ),
