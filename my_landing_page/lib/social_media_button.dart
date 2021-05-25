@@ -5,6 +5,8 @@ import 'package:url_launcher/url_launcher.dart';
 class SocialMediaButton extends StatelessWidget {
   const SocialMediaButton({
     Key key,
+    @required this.buttonColor,
+    @required this.iconColor,
     @required this.socialMedia,
     @required this.socialIcon,
     @required this.socialURL,
@@ -12,6 +14,8 @@ class SocialMediaButton extends StatelessWidget {
   final String socialMedia;
   final IconData socialIcon;
   final String socialURL;
+  final Color buttonColor;
+  final Color iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +25,11 @@ class SocialMediaButton extends StatelessWidget {
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         constraints: BoxConstraints(maxHeight: 50, maxWidth: 50),
         elevation: 2.0,
-        fillColor: Colors.black,
+        fillColor: buttonColor,
         child: FaIcon(
           socialIcon,
           size: 20,
-          color: Colors.amber,
+          color: iconColor,
         ),
         onPressed: () {
           debugPrint("TAKE ME TO $socialMedia!");

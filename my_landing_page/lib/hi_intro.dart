@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/intro_text.dart';
 import 'package:my_landing_page/social_media.dart';
+import 'package:my_landing_page/web_nav.dart';
 
 class HiIntro extends StatelessWidget {
   const HiIntro({
@@ -18,68 +19,7 @@ class HiIntro extends StatelessWidget {
             flex: 1,
             child: Container(
               padding: EdgeInsets.only(left: 150, top: 100),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      debugPrint("ROUTING TO ABOUT PAGE!!");
-                    },
-                    child: Text(
-                      'ABOUT',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Futura',
-                        fontWeight: FontWeight.w200,
-                      ),
-                    ),
-                    style: TextButton.styleFrom(
-                      shadowColor: Colors.black,
-                      elevation: 5.0,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 40,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      debugPrint("ROUTING TO WORK PAGE!!");
-                    },
-                    child: Text(
-                      'WORK',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Futura',
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
-                    style: TextButton.styleFrom(
-                      shadowColor: Colors.black,
-                      elevation: 5.0,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 40,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      debugPrint("ROUTING TO CONTACT PAGE!!");
-                    },
-                    child: Text(
-                      'CONTACT',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Futura',
-                        fontWeight: FontWeight.w200,
-                      ),
-                    ),
-                    style: TextButton.styleFrom(
-                      shadowColor: Colors.black,
-                      elevation: 5.0,
-                    ),
-                  ),
-                ],
-              ),
+              child: WebNav(),
             ),
           ),
           Expanded(
@@ -97,7 +37,13 @@ class HiIntro extends StatelessWidget {
           ),
           Expanded(
             flex: 2,
-            child: SocialMedia(),
+            child: SocialMedia(
+              buttonColor: Colors.black,
+              iconColor: Colors.amber,
+              buttonRowAxis: MainAxisAlignment.start,
+              buttonRowAlignment: Alignment.topLeft,
+              buttonRowPadding: EdgeInsets.only(left: 150, top: 50),
+            ),
           ),
           Container(
             alignment: Alignment.bottomLeft,
