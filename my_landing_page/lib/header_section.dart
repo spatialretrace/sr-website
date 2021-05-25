@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/web_nav.dart';
+import 'package:flutter/rendering.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({
@@ -12,36 +14,33 @@ class HeaderSection extends StatelessWidget {
         SizedBox(
           height: 50,
         ),
-        Container(
-          color: Colors.white,
-          width: 60,
-          height: 60,
+        MouseRegion(
+          cursor: SystemMouseCursors.click,
+          child: GestureDetector(
+            child: Container(
+              // color: Colors.white,
+              width: 60,
+              height: 60,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('assets/Avatar.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            onTap: () {
+              debugPrint("ROUTING BACK TO LANDING PAGE!!!");
+              Navigator.pushNamed(context, '/');
+            },
+          ),
         ),
         SizedBox(
           height: 30,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            //ABOUT
-            Container(
-              color: Colors.white,
-              width: 80,
-              height: 20,
-            ),
-            //WORK
-            Container(
-              color: Colors.white,
-              width: 80,
-              height: 20,
-            ),
-            //CONTACT
-            Container(
-              color: Colors.white,
-              width: 80,
-              height: 20,
-            ),
-          ],
+        WebNav(
+          navAlignment: MainAxisAlignment.center,
+          navSpacing: 80,
         ),
         SizedBox(
           height: 50,

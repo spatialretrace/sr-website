@@ -19,7 +19,10 @@ class HiIntro extends StatelessWidget {
             flex: 1,
             child: Container(
               padding: EdgeInsets.only(left: 150, top: 100),
-              child: WebNav(),
+              child: WebNav(
+                navAlignment: MainAxisAlignment.start,
+                navSpacing: 40,
+              ),
             ),
           ),
           Expanded(

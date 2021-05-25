@@ -20,7 +20,7 @@ class WorkPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  //HEADER REGION
+                  //HEADER SECTION
                   HeaderSection(),
                   //PORTFOLIO PROJECT NAVIGATOR
                   NavPortfolio(width: width),
@@ -29,6 +29,7 @@ class WorkPage extends StatelessWidget {
                   ),
                   //PORTFOLIO GALLERY SECTION
                   PortfolioSection(width: width),
+                  //FOOTER SECTION
                   FooterSection(),
                 ],
               ),

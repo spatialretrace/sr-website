@@ -3,11 +3,17 @@ import 'package:flutter/material.dart';
 class WebNav extends StatelessWidget {
   const WebNav({
     Key key,
+    @required this.navSpacing,
+    @required this.navAlignment,
   }) : super(key: key);
+
+  final double navSpacing;
+  final MainAxisAlignment navAlignment;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: navAlignment,
       mainAxisSize: MainAxisSize.max,
       children: [
         TextButton(
@@ -28,7 +34,7 @@ class WebNav extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: 40,
+          width: navSpacing,
         ),
         TextButton(
           onPressed: () {
@@ -49,7 +55,7 @@ class WebNav extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: 40,
+          width: navSpacing,
         ),
         TextButton(
           onPressed: () {
