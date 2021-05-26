@@ -13,18 +13,24 @@ class FooterSection extends StatelessWidget {
         SizedBox(
           height: 180,
         ),
-        Container(
-          color: Colors.white,
-          width: 200,
-          height: 20,
+        Text(
+          'ALL DESIGNS \u00a9 FIRDOUS NIZAR',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Futura',
+            fontWeight: FontWeight.w200,
+          ),
         ),
         SizedBox(
           height: 20,
         ),
-        Container(
-          color: Colors.white,
-          width: 150,
-          height: 20,
+        Text(
+          'SPATIAL RETRACE, 2021',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Futura',
+            fontWeight: FontWeight.w200,
+          ),
         ),
         SizedBox(
           height: 20,
@@ -38,40 +44,6 @@ class FooterSection extends StatelessWidget {
             horizontal: 0,
           ),
         ),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     Container(
-        //       color: Colors.white,
-        //       width: 40,
-        //       height: 40,
-        //     ),
-        //     SizedBox(
-        //       width: 20,
-        //     ),
-        //     Container(
-        //       color: Colors.white,
-        //       width: 40,
-        //       height: 40,
-        //     ),
-        //     SizedBox(
-        //       width: 20,
-        //     ),
-        //     Container(
-        //       color: Colors.white,
-        //       width: 40,
-        //       height: 40,
-        //     ),
-        //     SizedBox(
-        //       width: 20,
-        //     ),
-        //     Container(
-        //       color: Colors.white,
-        //       width: 40,
-        //       height: 40,
-        //     ),
-        //   ],
-        // )
       ],
     );
   }

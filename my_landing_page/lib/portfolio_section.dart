@@ -16,40 +16,29 @@ class PortfolioSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-              color: Colors.white,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.white,
+              ),
+              // color: Colors.white,
               width: (width * 0.6) / 3,
               height: (width * 0.6) / 3,
             ),
             Container(
-              color: Colors.white,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.white,
+              ),
+              // color: Colors.white,
               width: (width * 0.6) / 3,
               height: (width * 0.6) / 3,
             ),
             Container(
-              color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-          ],
-        ),
-        SizedBox(
-          height: 50,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-            Container(
-              color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-            Container(
-              color: Colors.white,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.white,
+              ),
+              // color: Colors.white,
               width: (width * 0.6) / 3,
               height: (width * 0.6) / 3,
             ),
@@ -62,17 +51,64 @@ class PortfolioSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-              color: Colors.white,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.white,
+              ),
+              // color: Colors.white,
               width: (width * 0.6) / 3,
               height: (width * 0.6) / 3,
             ),
             Container(
-              color: Colors.white,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.white,
+              ),
+              // color: Colors.white,
               width: (width * 0.6) / 3,
               height: (width * 0.6) / 3,
             ),
             Container(
-              color: Colors.white,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.white,
+              ),
+              // color: Colors.white,
+              width: (width * 0.6) / 3,
+              height: (width * 0.6) / 3,
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 50,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.white,
+              ),
+              // color: Colors.white,
+              width: (width * 0.6) / 3,
+              height: (width * 0.6) / 3,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.white,
+              ),
+              // color: Colors.white,
+              width: (width * 0.6) / 3,
+              height: (width * 0.6) / 3,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.white,
+              ),
+              // color: Colors.white,
               width: (width * 0.6) / 3,
               height: (width * 0.6) / 3,
             ),

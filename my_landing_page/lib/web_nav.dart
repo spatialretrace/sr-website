@@ -4,10 +4,14 @@ class WebNav extends StatelessWidget {
   const WebNav({
     Key key,
     @required this.navSpacing,
+    @required this.navTextColor,
+    @required this.navTextElevation,
     @required this.navAlignment,
   }) : super(key: key);
 
   final double navSpacing;
+  final Color navTextColor;
+  final double navTextElevation;
   final MainAxisAlignment navAlignment;
 
   @override
@@ -23,14 +27,14 @@ class WebNav extends StatelessWidget {
           child: Text(
             'ABOUT',
             style: TextStyle(
-              color: Colors.white,
+              color: navTextColor,
               fontFamily: 'Futura',
               fontWeight: FontWeight.w200,
             ),
           ),
           style: TextButton.styleFrom(
             shadowColor: Colors.black,
-            elevation: 5.0,
+            elevation: navTextElevation,
           ),
         ),
         SizedBox(
@@ -44,14 +48,14 @@ class WebNav extends StatelessWidget {
           child: Text(
             'WORK',
             style: TextStyle(
-              color: Colors.white,
+              color: navTextColor,
               fontFamily: 'Futura',
               fontWeight: FontWeight.w100,
             ),
           ),
           style: TextButton.styleFrom(
             shadowColor: Colors.black,
-            elevation: 5.0,
+            elevation: navTextElevation,
           ),
         ),
         SizedBox(
@@ -64,14 +68,14 @@ class WebNav extends StatelessWidget {
           child: Text(
             'CONTACT',
             style: TextStyle(
-              color: Colors.white,
+              color: navTextColor,
               fontFamily: 'Futura',
               fontWeight: FontWeight.w200,
             ),
           ),
           style: TextButton.styleFrom(
             shadowColor: Colors.black,
-            elevation: 5.0,
+            elevation: navTextElevation,
           ),
         ),
       ],

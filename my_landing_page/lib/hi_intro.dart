@@ -21,6 +21,8 @@ class HiIntro extends StatelessWidget {
               padding: EdgeInsets.only(left: 150, top: 100),
               child: WebNav(
                 navAlignment: MainAxisAlignment.start,
+                navTextColor: Colors.white,
+                navTextElevation: 3.0,
                 navSpacing: 40,
               ),
             ),
