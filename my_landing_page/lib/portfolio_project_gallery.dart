@@ -5,9 +5,11 @@ class PortfolioProject extends StatelessWidget {
   const PortfolioProject({
     Key key,
     @required this.projectName,
+    @required this.previewImage,
   }) : super(key: key);
 
   final String projectName;
+  final String previewImage;
   @override
   Widget build(BuildContext context) {
     final double currentWorkWidth = MediaQuery.of(context).size.width;
@@ -21,7 +23,10 @@ class PortfolioProject extends StatelessWidget {
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            color: Colors.white,
+            // color: Colors.white,
+            image: DecorationImage(
+              image: AssetImage(previewImage),
+            ),
           ),
           // color: Colors.white,
           width: (currentWorkWidth * 0.8) / 3,
@@ -52,7 +57,10 @@ class PortfolioGallery extends StatelessWidget {
       // mainAxisSpacing: 10,
       children: [
         for (var project in projects)
-          PortfolioProject(projectName: project.projectName),
+          PortfolioProject(
+            projectName: project.projectName,
+            previewImage: project.previewImage,
+          ),
       ],
     );
   }
