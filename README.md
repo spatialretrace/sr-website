@@ -9,4 +9,4 @@ Working on Web Design of Architecture and Design Blog, "[Spatial Retrace](https:
 
 **WORK**
 
-![work_page](screenshots/01_work.gif)
+![work_page](screenshots/01_workpage.gif)
