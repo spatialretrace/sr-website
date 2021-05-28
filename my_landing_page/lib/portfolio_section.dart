@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/portfolio_project_gallery.dart';
+// import 'package:my_landing_page/matrix_test.dart';
 
 class PortfolioSection extends StatelessWidget {
   const PortfolioSection({
@@ -11,109 +13,9 @@ class PortfolioSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.max,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              // color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              // color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              // color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-          ],
-        ),
-        SizedBox(
-          height: 50,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              // color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              // color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              // color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-          ],
-        ),
-        SizedBox(
-          height: 50,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              // color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              // color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.white,
-              ),
-              // color: Colors.white,
-              width: (width * 0.6) / 3,
-              height: (width * 0.6) / 3,
-            ),
-          ],
-        ),
+        PortfolioGallery(),
       ],
     );
   }

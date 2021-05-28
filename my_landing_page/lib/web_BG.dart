@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/list_portfolio_projects.dart';
 
 class WebBG extends StatelessWidget {
   const WebBG({
@@ -15,7 +16,7 @@ class WebBG extends StatelessWidget {
     return Expanded(
       child: Container(
         color: homeBGback,
-        height: 2000,
+        height: MediaQuery.of(context).size.width * 1.2635 + 620,
         padding: EdgeInsets.all(20),
         child: Container(
           decoration: BoxDecoration(
