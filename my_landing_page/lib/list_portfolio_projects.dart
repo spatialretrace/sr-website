@@ -12,13 +12,18 @@ import 'package:my_landing_page/portfolioProjectWidgets/retracer_e_studio.dart';
 
 final List<Project> projects = [
   Project(
-    previewImage: 'assets/preview_MoonCeption.png',
-    hoverImage: 'assets/hover_MoonCeption.jpeg',
-    designCategory: ['Architecture', 'Conceptual'],
-    year: 2019,
+    previewImage: 'assets/preview_Retracer.png',
+    hoverImage: 'assets/hover_Retracer.png',
+    designCategory: [
+      'Application Design',
+      'Architecture',
+      'Education',
+      'Hybrid'
+    ],
+    year: 2020,
     place: 'Montreal, CANADA',
-    projectName: 'MoonCeption',
-    blogWidget: MoonCeption(),
+    projectName: 'RetracerEStudio',
+    blogWidget: RetracerEStudio(),
   ),
   Project(
     previewImage: 'assets/preview_MaxTheSpider.png',
@@ -37,6 +42,15 @@ final List<Project> projects = [
     place: 'Montreal, CANADA',
     projectName: 'MacchegaunSchool',
     blogWidget: MSchool(),
+  ),
+  Project(
+    previewImage: 'assets/preview_MoonCeption.png',
+    hoverImage: 'assets/hover_MoonCeption.jpeg',
+    designCategory: ['Architecture', 'Conceptual'],
+    year: 2019,
+    place: 'Montreal, CANADA',
+    projectName: 'MoonCeption',
+    blogWidget: MoonCeption(),
   ),
   Project(
     previewImage: 'assets/preview_HybridLibrary.png',
@@ -65,20 +79,6 @@ final List<Project> projects = [
     place: 'Tokyo, JAPAN',
     projectName: 'CADTemple',
     blogWidget: CADTemple(),
-  ),
-  Project(
-    previewImage: 'assets/preview_Retracer.png',
-    hoverImage: 'assets/hover_Retracer.png',
-    designCategory: [
-      'Application Design',
-      'Architecture',
-      'Education',
-      'Hybrid'
-    ],
-    year: 2020,
-    place: 'Montreal, CANADA',
-    projectName: 'RetracerEStudio',
-    blogWidget: RetracerEStudio(),
   ),
   // Project(projectName: 'DrawingMatters'),
   Project(
