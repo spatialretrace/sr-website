@@ -15,7 +15,11 @@ class WorkPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Stack(
           children: [
-            WebBG(homeBGback: homeBGback, homeBGfront: homeBGfront),
+            WebBG(
+              homeBGback: homeBGback,
+              homeBGfront: homeBGfront,
+              pageHeight: width * 1.2635 + 620,
+            ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,

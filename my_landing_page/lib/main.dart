@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/about_page.dart';
 import 'package:my_landing_page/work_page.dart';
 import 'package:my_landing_page/landing_page.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => LandingPage(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/work': (context) => WorkPage(),
+        '/about': (context) => AboutPage(),
       },
     );
   }

@@ -23,6 +23,7 @@ class WebNav extends StatelessWidget {
         TextButton(
           onPressed: () {
             debugPrint("ROUTING TO ABOUT PAGE!!");
+            Navigator.pushNamed(context, '/about');
           },
           child: Text(
             'ABOUT',

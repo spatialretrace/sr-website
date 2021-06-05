@@ -10,3 +10,7 @@ Working on Web Design of Architecture and Design Blog, "[Spatial Retrace](https:
 **WORK**
 
 ![work_page](screenshots/01_workpage.gif)
+
+**ABOUT**
+
+![about_page](screenshots/02_about.gif)

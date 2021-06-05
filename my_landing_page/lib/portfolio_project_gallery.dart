@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/list_portfolio_projects.dart';
+import 'package:my_landing_page/extensions/hover_extensions.dart';
 
 class PortfolioProject extends StatefulWidget {
   const PortfolioProject({
@@ -35,31 +36,8 @@ class _PortfolioProjectState extends State<PortfolioProject> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        MouseRegion(
-          onHover: (isHovering) {
-            if (isHovering == true) {
-              setState(() {
-                debugPrint('Hovering on project!!');
-                projectImage = widget.hoverImage;
-                projectBorder = Border.all(
-                  color: Colors.amber,
-                  style: BorderStyle.solid,
-                  width: 2,
-                );
-                projectTitle = widget.projectName;
-              });
-            } else {
-              setState(() {
-                projectImage = widget.previewImage;
-                projectBorder = Border.all(
-                  color: Colors.black,
-                  style: BorderStyle.none,
-                  width: 0,
-                );
-                projectTitle = '';
-              });
-            }
-          },
+        Material(
+          color: Colors.transparent,
           child: Container(
             alignment: Alignment.center,
             padding: EdgeInsets.all(10),
@@ -81,7 +59,7 @@ class _PortfolioProjectState extends State<PortfolioProject> {
                   fontFamily: 'Futura',
                   fontWeight: FontWeight.w800,
                 )),
-          ),
+          ).tileProjectOnHover,
         ),
         SizedBox(
           height: currentWorkWidth * 0.05,
