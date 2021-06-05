@@ -26,27 +26,13 @@ class AboutPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    height: 50,
-                  ),
-                  //NAV SECTION
-                  WebNav(
-                    navAlignment: MainAxisAlignment.center,
-                    navTextColor: Colors.white,
-                    navTextElevation: 3.0,
-                    navSpacing: 80,
-                  ),
-                  SizedBox(
-                    height: 50,
-                  ),
-
                   Container(
                     padding: EdgeInsets.only(
-                      top: 50,
+                      // top: 50,
                       right: 50,
-                      bottom: 50,
+                      // bottom: 50,
                     ),
-                    height: 720,
+                    height: height * 1.5,
                     child: Row(
                       children: [
                         //WEIRD CURVE AND FACE SECTION
@@ -60,12 +46,30 @@ class AboutPage extends StatelessWidget {
                             // color: Colors.amber,
                             child: Column(
                               children: [
+                                SizedBox(
+                                  height: 50,
+                                ),
+                                //NAV SECTION
+                                WebNav(
+                                  navAlignment: MainAxisAlignment.center,
+                                  navTextColor: Colors.white,
+                                  navTextElevation: 3.0,
+                                  navSpacing: 80,
+                                ),
+                                SizedBox(
+                                  height: 50,
+                                ),
                                 //INTRO VIDEO & BIO SECTION
                                 IntroVideoBio(
                                   widgetFlex: 5,
                                 ),
                                 //REVIEWS SECTION
                                 Reviews(),
+                                //FOOTER SECTION
+                                FooterSection(),
+                                SizedBox(
+                                  height: 50,
+                                ),
                               ],
                             ),
                           ),
@@ -73,8 +77,6 @@ class AboutPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  //FOOTER SECTION
-                  FooterSection(),
                 ],
               ),
             ),
