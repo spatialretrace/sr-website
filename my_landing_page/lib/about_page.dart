@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_landing_page/curve_n_face.dart';
 import 'package:my_landing_page/footer_section.dart';
+import 'package:my_landing_page/intro_video_bio.dart';
+import 'package:my_landing_page/reviews.dart';
 import 'package:my_landing_page/web_BG.dart';
 import 'package:my_landing_page/web_nav.dart';
 
@@ -43,18 +46,14 @@ class AboutPage extends StatelessWidget {
                       right: 50,
                       bottom: 50,
                     ),
-                    height: 700,
+                    height: 720,
                     child: Row(
                       children: [
                         //WEIRD CURVE AND FACE SECTION
-                        Expanded(
-                          flex: 2,
-                          child: Container(
-                            margin: EdgeInsets.only(right: 40),
-                            // padding: EdgeInsets.only(right: 50),
-                            color: Colors.white,
-                          ),
+                        CurveNFace(
+                          widgetFlex: 2,
                         ),
+                        //ABOUT CONTENT SECTION
                         Expanded(
                           flex: 5,
                           child: Container(
@@ -62,58 +61,11 @@ class AboutPage extends StatelessWidget {
                             child: Column(
                               children: [
                                 //INTRO VIDEO & BIO SECTION
-                                Expanded(
-                                  flex: 5,
-                                  child: Container(
-                                    padding: EdgeInsets.only(
-                                      bottom: 30,
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Expanded(
-                                          flex: 4,
-                                          child: Container(
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 2,
-                                          child: Container(
-                                            color: Colors.amber,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
+                                IntroVideoBio(
+                                  widgetFlex: 5,
                                 ),
                                 //REVIEWS SECTION
-                                Expanded(
-                                  flex: 2,
-                                  child: Container(
-                                    child: Row(
-                                      children: [
-                                        Expanded(
-                                          flex: 1,
-                                          child: Container(
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 6,
-                                          child: Container(
-                                            color: Colors.amber,
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 1,
-                                          child: Container(
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                Reviews(),
                               ],
                             ),
                           ),
@@ -121,7 +73,6 @@ class AboutPage extends StatelessWidget {
                       ],
                     ),
                   ),
-
                   //FOOTER SECTION
                   FooterSection(),
                 ],
