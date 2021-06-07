@@ -65,6 +65,7 @@ class WebNav extends StatelessWidget {
         TextButton(
           onPressed: () {
             debugPrint("ROUTING TO CONTACT PAGE!!");
+            Navigator.pushNamed(context, '/contact');
           },
           child: Text(
             'CONTACT',
