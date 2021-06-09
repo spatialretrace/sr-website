@@ -3,6 +3,14 @@ import 'package:my_landing_page/pages/02_about_page/about_page.dart';
 import 'package:my_landing_page/pages/01_work_page/work_page.dart';
 import 'package:my_landing_page/pages/00_landing_page/landing_page.dart';
 import 'package:my_landing_page/pages/03_contact_page/contact_page.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/cad_temple.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/hybrid_museum_library.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/m_school.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/marilou_laundry.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/max_the_spider.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/moon_ception.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/my_vendor_van.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/retracer_e_studio.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,10 +27,16 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => LandingPage(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
         '/work': (context) => WorkPage(),
+        '/work/cad-temple': (context) => CADTemple(),
+        '/work/moonception': (context) => MoonCeption(),
+        '/work/my-vendor-van': (context) => MyVendorVan(),
+        '/work/hybrid-museum-library': (context) => HybridMLibrary(),
+        '/work/marilou-laundry': (context) => MarilouLaundry(),
+        '/work/macchegaun-school': (context) => MSchool(),
+        '/work/max-the-spider': (context) => MaxTheSpider(),
+        '/work/retracer-e-studio': (context) => RetracerEStudio(),
         '/about': (context) => AboutPage(),
         '/contact': (context) => ContactPage(),
       },

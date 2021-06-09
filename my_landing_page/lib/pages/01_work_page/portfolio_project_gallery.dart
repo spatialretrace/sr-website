@@ -79,10 +79,17 @@ class PortfolioGallery extends StatelessWidget {
       // mainAxisSpacing: 10,
       children: [
         for (var project in projects)
-          PortfolioProject(
-            projectName: project.projectName,
-            previewImage: project.previewImage,
-            hoverImage: project.hoverImage,
+          GestureDetector(
+            onTap: () {
+              debugPrint(
+                  'ROUTING TO PAGE OF PROJECT ${project.projectName}!!!');
+              Navigator.pushNamed(context, "/work${project.projectRoute}");
+            },
+            child: PortfolioProject(
+              projectName: project.projectName,
+              previewImage: project.previewImage,
+              hoverImage: project.hoverImage,
+            ),
           ),
       ],
     );
