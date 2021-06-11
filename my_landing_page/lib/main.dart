@@ -3,13 +3,13 @@ import 'package:my_landing_page/pages/02_about_page/about_page.dart';
 import 'package:my_landing_page/pages/01_work_page/work_page.dart';
 import 'package:my_landing_page/pages/00_landing_page/landing_page.dart';
 import 'package:my_landing_page/pages/03_contact_page/contact_page.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/cad_temple.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/hybrid_museum_library.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/m_school.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/marilou_laundry.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/CAD_Temple/cad_temple.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Library/hybrid_museum_library.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Macchegaun_School/m_school.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/marilou_laundry.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/max_the_spider.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/moon_ception.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/my_vendor_van.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/my_vendor_van.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/retracer_e_studio.dart';
 
 void main() {
