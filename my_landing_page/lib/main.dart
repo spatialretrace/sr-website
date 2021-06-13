@@ -7,10 +7,10 @@ import 'package:my_landing_page/portfolioProjectWidgets/CAD_Temple/cad_temple.da
 import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Library/hybrid_museum_library.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Macchegaun_School/m_school.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/marilou_laundry.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/max_the_spider.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/moon_ception.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Max_The_Spider/max_the_spider.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Moonception/moon_ception.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/my_vendor_van.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/retracer_e_studio.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Retracer/retracer_e_studio.dart';
 
 void main() {
   runApp(MyApp());

@@ -3,20 +3,20 @@ import 'package:my_landing_page/portfolioProjectWidgets/CAD_Temple/cad_temple.da
 import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Library/hybrid_museum_library.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Macchegaun_School/m_school.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/marilou_laundry.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/max_the_spider.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/moon_ception.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Max_The_Spider/max_the_spider.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Moonception/moon_ception.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/my_vendor_van.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/retracer_e_studio.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Retracer/retracer_e_studio.dart';
 
 final List<Project> projects = [
   Project(
     previewImage: 'projectAssets/Retracer/preview_Retracer.png',
     hoverImage: 'projectAssets/Retracer/hover_Retracer.png',
     designCategory: [
-      'Application Design',
+      'Hybrid Application',
       'Architecture',
       'Education',
-      'Hybrid'
+      // 'Hybrid'
     ],
     year: 2020,
     place: 'Montreal, CANADA',
@@ -35,7 +35,7 @@ final List<Project> projects = [
     designCategory: ['Illustration', 'Surreal'],
     year: 2020,
     place: 'Montreal, CANADA',
-    projectName: 'MAX THE SPIDER',
+    projectName: 'SPIDER MAXIMILLIAN',
     blogWidget: MaxTheSpider(),
     projectRoute: '/max-the-spider',
     color1: Color(0xFF122C45),
@@ -108,7 +108,7 @@ final List<Project> projects = [
   Project(
     previewImage: 'projectAssets/Vendor_Van/preview_VendorVan.png',
     hoverImage: 'projectAssets/Vendor_Van/hover_VendorVan.png',
-    designCategory: ['Product Design', 'Commercial'],
+    designCategory: ['Product Design', 'Retail'],
     year: 2016,
     place: 'Calicut, INDIA',
     projectName: 'VENDOR VAN',
@@ -126,7 +126,7 @@ final List<Project> projects = [
     designCategory: ['Architecture', 'Conceptual'],
     year: 2019,
     place: 'Montreal, CANADA',
-    projectName: 'MoonCeption',
+    projectName: 'TOWARD MOONCEPTION',
     blogWidget: MoonCeption(),
     projectRoute: '/moonception',
     color1: Color(0xFFB2BAA3),

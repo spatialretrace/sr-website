@@ -48,8 +48,8 @@ class ProjectSlide1 extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                      image: AssetImage(currentProject.previewImage),
-                      fit: BoxFit.fitWidth),
+                      image: AssetImage(currentProject.hoverImage),
+                      fit: BoxFit.fitHeight),
                 ),
               ),
             ),
@@ -70,8 +70,8 @@ class ProjectSlide1 extends StatelessWidget {
                       currentProjectName: currentProjectName,
                       lightTextColor: currentProject.color2,
                       midTextColor: currentProject.color3,
-                      topFontSize: 75,
-                      bottomFontSize: 70,
+                      topFontSize: 40,
+                      bottomFontSize: 60,
                     ),
                     SizedBox(
                       height: 20,
@@ -80,6 +80,7 @@ class ProjectSlide1 extends StatelessWidget {
                     ProjectCategories(
                       currentProject: currentProject,
                       categoryColor: currentProject.color5,
+                      categoryAlign: Alignment.centerLeft,
                     ),
                     SizedBox(
                       height: 20,

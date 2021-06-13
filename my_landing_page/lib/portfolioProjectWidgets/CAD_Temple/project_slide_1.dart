@@ -81,6 +81,7 @@ class ProjectSlide1 extends StatelessWidget {
                     ProjectCategories(
                       currentProject: currentProject,
                       categoryColor: currentProject.color5,
+                      categoryAlign: Alignment.centerLeft,
                     ),
                     SizedBox(
                       height: 20,

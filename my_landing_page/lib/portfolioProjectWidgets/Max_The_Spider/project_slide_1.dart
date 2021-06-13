@@ -49,7 +49,7 @@ class ProjectSlide1 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                       image: AssetImage(currentProject.previewImage),
-                      fit: BoxFit.fitWidth),
+                      fit: BoxFit.fitHeight),
                 ),
               ),
             ),
@@ -71,7 +71,7 @@ class ProjectSlide1 extends StatelessWidget {
                       lightTextColor: currentProject.color2,
                       midTextColor: currentProject.color3,
                       topFontSize: 75,
-                      bottomFontSize: 70,
+                      bottomFontSize: 42,
                     ),
                     SizedBox(
                       height: 20,

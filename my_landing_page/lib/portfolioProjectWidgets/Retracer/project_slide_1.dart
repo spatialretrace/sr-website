@@ -10,12 +10,16 @@ class ProjectSlide1 extends StatelessWidget {
     @required this.currentProjectName,
     @required this.projectBrief,
     @required this.slideBGColor,
+    @required this.topFontSize,
+    @required this.bottomFontSize,
   }) : super(key: key);
 
   final Project currentProject;
   final List<String> currentProjectName;
   final Widget projectBrief;
   final Color slideBGColor;
+  final double topFontSize;
+  final double bottomFontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +53,7 @@ class ProjectSlide1 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                       image: AssetImage(currentProject.previewImage),
-                      fit: BoxFit.fitWidth),
+                      fit: BoxFit.fitHeight),
                 ),
               ),
             ),
@@ -70,8 +74,8 @@ class ProjectSlide1 extends StatelessWidget {
                       currentProjectName: currentProjectName,
                       lightTextColor: currentProject.color2,
                       midTextColor: currentProject.color3,
-                      topFontSize: 75,
-                      bottomFontSize: 70,
+                      topFontSize: topFontSize,
+                      bottomFontSize: bottomFontSize,
                     ),
                     SizedBox(
                       height: 20,

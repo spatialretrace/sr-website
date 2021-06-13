@@ -6,17 +6,19 @@ class ProjectCategories extends StatelessWidget {
     Key key,
     @required this.currentProject,
     @required this.categoryColor,
+    @required this.categoryAlign,
   }) : super(key: key);
 
   final Project currentProject;
   final Color categoryColor;
+  final AlignmentGeometry categoryAlign;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       flex: 1,
       child: Container(
-        alignment: Alignment.center,
+        alignment: categoryAlign,
         child: Text.rich(
           TextSpan(children: [
             for (var category in currentProject.designCategory)
