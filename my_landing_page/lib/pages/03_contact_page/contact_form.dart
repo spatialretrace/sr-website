@@ -14,6 +14,7 @@ class ContactForm extends StatelessWidget {
           children: [
             Column(
               children: [
+                //NAME FIELD
                 Container(
                   margin: EdgeInsets.only(
                     bottom: 20,
@@ -31,7 +32,7 @@ class ContactForm extends StatelessWidget {
                   child: TextField(
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
-                      hintText: 'Name',
+                      hintText: 'Name*',
                       hintStyle: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Futura',
@@ -42,6 +43,7 @@ class ContactForm extends StatelessWidget {
                     ),
                   ),
                 ),
+                //EMAIL FIELD
                 Container(
                   margin: EdgeInsets.only(
                     bottom: 20,
@@ -59,7 +61,7 @@ class ContactForm extends StatelessWidget {
                   child: TextField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                      hintText: 'Email',
+                      hintText: 'Email*',
                       hintStyle: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Futura',
@@ -70,6 +72,7 @@ class ContactForm extends StatelessWidget {
                     ),
                   ),
                 ),
+                //SUBJETC FIELD
                 Container(
                   margin: EdgeInsets.only(
                     bottom: 20,
@@ -85,9 +88,38 @@ class ContactForm extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: TextField(
-                    maxLines: 10,
+                    // maxLength: 150,
                     decoration: InputDecoration(
-                      hintText: 'Message',
+                      hintText: 'Subject*',
+                      hintStyle: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Futura',
+                      ),
+                      border: InputBorder.none,
+                      filled: true,
+                      fillColor: Colors.white,
+                    ),
+                  ),
+                ),
+                //MESSAGE FIELD
+                Container(
+                  margin: EdgeInsets.only(
+                    bottom: 20,
+                    right: 60,
+                    left: 60,
+                  ),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.amber,
+                      width: 3,
+                      style: BorderStyle.solid,
+                    ),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: TextField(
+                    maxLines: 7,
+                    decoration: InputDecoration(
+                      hintText: 'Message*',
                       hintStyle: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Futura',
@@ -100,9 +132,10 @@ class ContactForm extends StatelessWidget {
                 ),
               ],
             ),
+            //SUBMIT BUTTON
             Positioned(
               right: 80,
-              bottom: 70,
+              bottom: 60,
               child: FloatingActionButton.extended(
                 onPressed: () {
                   debugPrint('MESSAGE SUBMITTED!!!');

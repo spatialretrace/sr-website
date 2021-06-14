@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
 import 'package:my_landing_page/extensions/hover_extensions.dart';
 
+List<String> projectTitle = [];
+// bool hoverFlag = false;
+
 class PortfolioProject extends StatefulWidget {
   const PortfolioProject({
     Key key,
@@ -25,42 +28,33 @@ class _PortfolioProjectState extends State<PortfolioProject> {
     final double currentWorkWidth = MediaQuery.of(context).size.width;
     // print(currentWorkWidth);
     String projectImage = widget.previewImage;
-    Border projectBorder = Border.all(
-      color: Colors.black,
-      style: BorderStyle.none,
-      width: 0,
-    );
-    ;
-    String projectTitle = widget.projectName;
+    projectTitle.add(widget.projectName);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        // Stack(children: [
         Material(
           color: Colors.transparent,
           child: Container(
             alignment: Alignment.center,
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
-              border: projectBorder,
               borderRadius: BorderRadius.circular(10),
               // color: Colors.white,
               image: DecorationImage(
                 image: AssetImage(projectImage),
+                fit: BoxFit.cover,
               ),
             ),
             // color: Colors.white,
             width: (currentWorkWidth * 0.8) / 3,
             height: (currentWorkWidth * 0.8) / 3,
-            child: Text(projectTitle,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Futura',
-                  fontWeight: FontWeight.w800,
-                )),
+            // child: tileProjectText(hoverFlag),
           ).tileProjectOnHover,
         ),
+        // tileProjectText(hoverFlag),
+        // ]),
         SizedBox(
           height: currentWorkWidth * 0.05,
         )
