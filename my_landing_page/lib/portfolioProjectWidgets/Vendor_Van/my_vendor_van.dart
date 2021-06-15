@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/project_blog.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/project_brief.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/project_slide_1.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Text/project_blog.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Text/project_brief.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Text/project_detail.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_1.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_2.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_3.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_4.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
 import 'package:my_landing_page/widgets/header_section.dart';
 import 'package:my_landing_page/widgets/nav_portfolio.dart';
 import 'package:my_landing_page/widgets/web_BG.dart';
+
+List<Widget> list = [];
 
 class MyVendorVan extends StatelessWidget {
   @override
@@ -16,18 +23,40 @@ class MyVendorVan extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     Project currentProject;
     Widget projectBrief;
+    Widget projectDetail;
     List<String> currentProjectName;
     for (var project in projects) {
-      if (project.projectName == 'VENDOR VAN') {
+      if (project.projectName == 'VENDOR STALL') {
         currentProject = project;
         projectBrief = ProjectBrief(
           darkTextColor: currentProject.color4,
           lightTextColor: currentProject.color2,
         );
+        projectDetail = ProjectDetail(
+          darkTextColor: currentProject.color5,
+          lightTextColor: currentProject.color1,
+        );
         debugPrint('${currentProject.projectName} HAS BEEN INITIALIZED!!!');
         currentProjectName = currentProject.projectName.split(' ');
       }
     }
+    list = [
+      ProjectSlide1(
+        currentProject: currentProject,
+        currentProjectName: currentProjectName,
+        projectBrief: projectBrief,
+      ),
+      ProjectSlide2(
+        currentProject: currentProject,
+      ),
+      ProjectSlide3(
+        currentProject: currentProject,
+        projectDetail: projectDetail,
+      ),
+      ProjectSlide4(
+        currentProject: currentProject,
+      ),
+    ];
     return Material(
       child: SingleChildScrollView(
         child: Stack(
@@ -50,12 +79,22 @@ class MyVendorVan extends StatelessWidget {
                   ),
                   //PROJECT CAROUSEL SECTION
                   Stack(alignment: AlignmentDirectional.center, children: [
-                    ProjectSlide1(
-                      currentProject: currentProject,
-                      currentProjectName: currentProjectName,
-                      projectBrief: projectBrief,
-                      slideBGColor: currentProject.color1,
-                    ),
+                    CarouselDemo(),
+                    // ProjectSlide1(
+                    //   currentProject: currentProject,
+                    //   currentProjectName: currentProjectName,
+                    //   projectBrief: projectBrief,
+                    // ),
+                    // ProjectSlide2(
+                    //   currentProject: currentProject,
+                    // ),
+                    // ProjectSlide3(
+                    //   currentProject: currentProject,
+                    //   projectDetail: projectDetail,
+                    // ),
+                    // ProjectSlide4(
+                    //   currentProject: currentProject,
+                    // ),
                     Positioned(
                       bottom: 20,
                       width: 960,
@@ -85,6 +124,43 @@ class MyVendorVan extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class CarouselDemo extends StatelessWidget {
+  CarouselController buttonCarouselController = CarouselController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        CarouselSlider(
+          items: list
+              .map((item) => Container(
+                    child: Center(
+                      child: item,
+                    ),
+                    // color: Colors.amber,
+                  ))
+              .toList(),
+          carouselController: buttonCarouselController,
+          options: CarouselOptions(
+            autoPlay: false,
+            enlargeCenterPage: true,
+            viewportFraction: 1,
+            // aspectRatio: 2.0,
+            initialPage: 0,
+          ),
+        ),
+        // ElevatedButton(
+        //   onPressed: () {
+        //     buttonCarouselController.nextPage(
+        //         duration: Duration(milliseconds: 300), curve: Curves.linear);
+        //   },
+        //   child: Text('>>>'),
+        // ),
+      ],
     );
   }
 }

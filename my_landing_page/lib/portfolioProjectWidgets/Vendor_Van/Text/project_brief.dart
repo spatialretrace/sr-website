@@ -12,6 +12,7 @@ class ProjectBrief extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double briefFontSize = 20;
     return Expanded(
       flex: 4,
       child: Container(
@@ -19,33 +20,43 @@ class ProjectBrief extends StatelessWidget {
           TextSpan(children: [
             TextSpan(
               text:
-                  'Confronting buidling material textures and attention to detail in cultural spaces such as the ',
+                  'Addressing the challenge of saving space and being self-sufficient in a limited footprint through a ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
-                fontSize: 22,
+                fontSize: briefFontSize,
                 fontWeight: FontWeight.w100,
                 height: 1.5,
               ),
             ),
             TextSpan(
-              text: 'Sensoji Temple, Tokyo',
+              text: 'vending stall design',
               style: TextStyle(
-                color: lightTextColor,
+                color: darkTextColor,
                 fontFamily: 'Futura',
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
+                fontSize: briefFontSize,
+                fontStyle: FontStyle.italic,
                 height: 1.5,
               ),
             ),
             TextSpan(
               text:
-                  ' through a wooden puzzle generated from a neutral AutoCAD drawing.',
+                  ' for food sales during the day and repose during the night in ',
               style: TextStyle(
                 color: darkTextColor,
                 fontFamily: 'Futura',
-                fontSize: 22,
+                fontSize: briefFontSize,
                 fontWeight: FontWeight.w100,
+                height: 1.5,
+              ),
+            ),
+            TextSpan(
+              text: 'Kozhikode (Calicut) Beach, India.',
+              style: TextStyle(
+                color: lightTextColor,
+                fontFamily: 'Futura',
+                fontSize: briefFontSize,
+                fontWeight: FontWeight.bold,
                 height: 1.5,
               ),
             ),

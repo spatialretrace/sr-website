@@ -111,7 +111,7 @@ final List<Project> projects = [
     designCategory: ['Product Design', 'Retail'],
     year: 2016,
     place: 'Calicut, INDIA',
-    projectName: 'VENDOR VAN',
+    projectName: 'VENDOR STALL',
     blogWidget: MyVendorVan(),
     projectRoute: '/my-vendor-van',
     color1: Color(0xFF0C89C2),

@@ -9,13 +9,11 @@ class ProjectSlide1 extends StatelessWidget {
     @required this.currentProject,
     @required this.currentProjectName,
     @required this.projectBrief,
-    @required this.slideBGColor,
   }) : super(key: key);
 
   final Project currentProject;
   final List<String> currentProjectName;
   final Widget projectBrief;
-  final Color slideBGColor;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +26,7 @@ class ProjectSlide1 extends StatelessWidget {
         left: 60,
       ),
       decoration: BoxDecoration(
-        color: slideBGColor,
+        color: currentProject.color1,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
@@ -71,7 +69,7 @@ class ProjectSlide1 extends StatelessWidget {
                       lightTextColor: currentProject.color2,
                       midTextColor: currentProject.color3,
                       topFontSize: 65,
-                      bottomFontSize: 125,
+                      bottomFontSize: 100,
                     ),
                     SizedBox(
                       height: 20,
