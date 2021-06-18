@@ -4,7 +4,7 @@ import 'package:my_landing_page/portfolioProjectWidgets/Hybrid_Library/hybrid_mu
 import 'package:my_landing_page/portfolioProjectWidgets/Macchegaun_School/m_school.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/marilou_laundry.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Max_The_Spider/max_the_spider.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Moonception/moon_ception.dart';
+// import 'package:my_landing_page/portfolioProjectWidgets/Moonception/moon_ception.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/my_vendor_van.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Retracer/retracer_e_studio.dart';
 
@@ -16,7 +16,7 @@ final List<Project> projects = [
       'Hybrid Application',
       'Architecture',
       'Education',
-      // 'Hybrid'
+      'MDes Thesis',
     ],
     year: 2020,
     place: 'Montreal, CANADA',
@@ -32,7 +32,10 @@ final List<Project> projects = [
   Project(
     previewImage: 'projectAssets/Max_The_Spider/preview_MaxTheSpider.png',
     hoverImage: 'projectAssets/Max_The_Spider/hover_MaxTheSpider.png',
-    designCategory: ['Illustration', 'Surreal'],
+    designCategory: [
+      'Illustration',
+      'Surreal',
+    ],
     year: 2020,
     place: 'Montreal, CANADA',
     projectName: 'SPIDER MAXIMILLIAN',
@@ -47,7 +50,11 @@ final List<Project> projects = [
   Project(
     previewImage: 'projectAssets/Macchegaun_School/preview_MSchool.png',
     hoverImage: 'projectAssets/Macchegaun_School/hover_MSchool.png',
-    designCategory: ['Illustration', 'Surreal'],
+    designCategory: [
+      'Disaster Rehabilitation',
+      'Vernacular Architecture',
+      'School Design',
+    ],
     year: 2020,
     place: 'Montreal, CANADA',
     projectName: 'MACCHEGAUN SCHOOL',
@@ -62,12 +69,16 @@ final List<Project> projects = [
   Project(
     previewImage: 'projectAssets/Marilou/preview_Marilou.png',
     hoverImage: 'projectAssets/Marilou/hover_Marilou.png',
-    designCategory: ['Illustration', 'Children\'s Book', 'Freelance'],
+    designCategory: [
+      'Illustration',
+      'Children\'s Book',
+      'Freelance',
+    ],
     year: 2021,
     place: 'Texas, USA',
-    projectName: 'MISCHIEVOUS MARILOU',
+    projectName: 'MISCHIEVOUS MARILU',
     blogWidget: MarilouLaundry(),
-    projectRoute: '/marilou-laundry',
+    projectRoute: '/marilu-laundry',
     color1: Color(0xFFE6BA6B),
     color2: Color(0xFF4279D0),
     color3: Color(0xFF2E2E6D),
@@ -77,7 +88,11 @@ final List<Project> projects = [
   Project(
     previewImage: 'projectAssets/CAD_Temple/preview_CADTemple.jpeg',
     hoverImage: 'projectAssets/CAD_Temple/hover_CADTemple.jpeg',
-    designCategory: ['Puzzle Design', 'Hybrid'],
+    designCategory: [
+      'Puzzle Design',
+      'Hybrid',
+      'Architectural Illustration',
+    ],
     year: 2019,
     place: 'Tokyo, JAPAN',
     projectName: 'CAD TEMPLE',
@@ -92,12 +107,17 @@ final List<Project> projects = [
   Project(
     previewImage: 'projectAssets/Hybrid_Library/preview_HybridLibrary.png',
     hoverImage: 'projectAssets/Hybrid_Library/hover_HybridLibrary.png',
-    designCategory: ['Architecture', 'Hybrid'],
+    designCategory: [
+      'Architecture',
+      'Hybrid',
+      'Museum Design',
+      'BArch Thesis',
+    ],
     year: 2018,
     place: 'Abu Dhabi, UAE',
-    projectName: 'HYBRID LIBRARY',
+    projectName: 'HYBRID MUSEUM',
     blogWidget: HybridMLibrary(),
-    projectRoute: '/hybrid-museum-library',
+    projectRoute: '/hybrid-museum',
     color1: Color(0xFFB5B7C3),
     color2: Color(0xFFE2CB99),
     color3: Color(0xFFF0B32D),
@@ -108,33 +128,36 @@ final List<Project> projects = [
   Project(
     previewImage: 'projectAssets/Vendor_Van/preview_VendorVan.png',
     hoverImage: 'projectAssets/Vendor_Van/hover_VendorVan.png',
-    designCategory: ['Product Design', 'Retail'],
+    designCategory: [
+      'Product Design',
+      'Retail',
+    ],
     year: 2016,
     place: 'Calicut, INDIA',
     projectName: 'VENDOR STALL',
     blogWidget: MyVendorVan(),
-    projectRoute: '/my-vendor-van',
+    projectRoute: '/vendor-stall',
     color1: Color(0xFF0C89C2),
     color2: Color(0xFFE8805B),
     color3: Color(0xFFA33B41),
     color4: Color(0xFFFFFFFF),
     color5: Color(0xFF441909),
   ),
-  Project(
-    previewImage: 'projectAssets/Moonception/preview_MoonCeption.png',
-    hoverImage: 'projectAssets/Moonception/hover_MoonCeption.jpeg',
-    designCategory: ['Architecture', 'Conceptual'],
-    year: 2019,
-    place: 'Montreal, CANADA',
-    projectName: 'TOWARD MOONCEPTION',
-    blogWidget: MoonCeption(),
-    projectRoute: '/moonception',
-    color1: Color(0xFFB2BAA3),
-    color2: Color(0xFFCC8102),
-    color3: Color(0xFF774000),
-    color4: Color(0xFF000000),
-    color5: Color(0xFF078C8A),
-  ),
+  // Project(
+  //   previewImage: 'projectAssets/Moonception/preview_MoonCeption.png',
+  //   hoverImage: 'projectAssets/Moonception/hover_MoonCeption.jpeg',
+  //   designCategory: ['Architecture', 'Conceptual'],
+  //   year: 2019,
+  //   place: 'Montreal, CANADA',
+  //   projectName: 'TOWARD MOONCEPTION',
+  //   blogWidget: MoonCeption(),
+  //   projectRoute: '/moonception',
+  //   color1: Color(0xFFB2BAA3),
+  //   color2: Color(0xFFCC8102),
+  //   color3: Color(0xFF774000),
+  //   color4: Color(0xFF000000),
+  //   color5: Color(0xFF078C8A),
+  // ),
   // Project(projectName: 'DrawingMatters'),
 ];
 

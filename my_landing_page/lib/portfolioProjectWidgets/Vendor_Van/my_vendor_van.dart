@@ -8,6 +8,7 @@ import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/projec
 import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_3.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Slides/project_slide_4.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
+import 'package:my_landing_page/widgets/carousel_demo.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
 import 'package:my_landing_page/widgets/header_section.dart';
 import 'package:my_landing_page/widgets/nav_portfolio.dart';
@@ -79,7 +80,7 @@ class MyVendorVan extends StatelessWidget {
                   ),
                   //PROJECT CAROUSEL SECTION
                   Stack(alignment: AlignmentDirectional.center, children: [
-                    CarouselDemo(),
+                    CarouselDemo(widgetList: list),
                     // ProjectSlide1(
                     //   currentProject: currentProject,
                     //   currentProjectName: currentProjectName,
@@ -124,43 +125,6 @@ class MyVendorVan extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class CarouselDemo extends StatelessWidget {
-  CarouselController buttonCarouselController = CarouselController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        CarouselSlider(
-          items: list
-              .map((item) => Container(
-                    child: Center(
-                      child: item,
-                    ),
-                    // color: Colors.amber,
-                  ))
-              .toList(),
-          carouselController: buttonCarouselController,
-          options: CarouselOptions(
-            autoPlay: false,
-            enlargeCenterPage: true,
-            viewportFraction: 1,
-            // aspectRatio: 2.0,
-            initialPage: 0,
-          ),
-        ),
-        // ElevatedButton(
-        //   onPressed: () {
-        //     buttonCarouselController.nextPage(
-        //         duration: Duration(milliseconds: 300), curve: Curves.linear);
-        //   },
-        //   child: Text('>>>'),
-        // ),
-      ],
     );
   }
 }
