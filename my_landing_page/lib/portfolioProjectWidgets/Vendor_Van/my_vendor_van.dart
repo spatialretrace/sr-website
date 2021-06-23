@@ -80,34 +80,6 @@ class MyVendorVan extends StatelessWidget {
                   //PROJECT CAROUSEL SECTION
                   Stack(alignment: AlignmentDirectional.center, children: [
                     CarouselDemo(widgetList: list),
-                    // ProjectSlide1(
-                    //   currentProject: currentProject,
-                    //   currentProjectName: currentProjectName,
-                    //   projectBrief: projectBrief,
-                    // ),
-                    // ProjectSlide2(
-                    //   currentProject: currentProject,
-                    // ),
-                    // ProjectSlide3(
-                    //   currentProject: currentProject,
-                    //   projectDetail: projectDetail,
-                    // ),
-                    // ProjectSlide4(
-                    //   currentProject: currentProject,
-                    // ),
-                    Positioned(
-                      bottom: 20,
-                      width: 960,
-                      // left: 20,
-                      // right: 20,
-                      child: Container(
-                        // width: 960,
-                        height: 20,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
                   ]),
                   //PROJECT BLOG SECTION
                   ProjectBlog(

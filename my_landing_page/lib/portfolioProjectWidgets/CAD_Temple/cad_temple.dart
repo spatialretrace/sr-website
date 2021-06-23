@@ -82,21 +82,6 @@ class CADTemple extends StatelessWidget {
                   //PROJECT CAROUSEL SECTION
                   Stack(alignment: AlignmentDirectional.center, children: [
                     CarouselDemo(widgetList: list),
-                    // ProjectSlide1(
-                    //   currentProject: currentProject,
-                    //   currentProjectName: currentProjectName,
-                    //   projectBrief: projectBrief,
-                    // ),
-                    // ProjectSlide2(
-                    //   currentProject: currentProject,
-                    // ),
-                    // ProjectSlide3(
-                    //   currentProject: currentProject,
-                    //   projectDetail: projectDetail,
-                    // ),
-                    // ProjectSlide4(
-                    //   currentProject: currentProject,
-                    // ),
                     Positioned(
                       bottom: 20,
                       width: 960,

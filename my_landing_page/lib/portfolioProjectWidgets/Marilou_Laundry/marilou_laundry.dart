@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/project_blog.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/project_brief.dart';
-import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/project_slide_1.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/Slides/project_slide_2.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/Slides/project_slide_3.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/Slides/project_slide_4.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/Text/project_blog.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/Text/project_brief.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/Slides/project_slide_1.dart';
+import 'package:my_landing_page/portfolioProjectWidgets/Marilou_Laundry/Text/project_detail.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
+import 'package:my_landing_page/widgets/carousel_demo.dart';
 import 'package:my_landing_page/widgets/footer_section.dart';
 import 'package:my_landing_page/widgets/header_section.dart';
 import 'package:my_landing_page/widgets/nav_portfolio.dart';
 import 'package:my_landing_page/widgets/web_BG.dart';
+
+List<Widget> list = [];
 
 class MarilouLaundry extends StatelessWidget {
   @override
@@ -16,18 +23,41 @@ class MarilouLaundry extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     Project currentProject;
     Widget projectBrief;
+    Widget projectDetail;
     List<String> currentProjectName;
     for (var project in projects) {
-      if (project.projectName == 'MISCHIEVOUS MARILOU') {
+      if (project.projectName == 'MISCHIEVOUS MARILU') {
         currentProject = project;
         projectBrief = ProjectBrief(
           darkTextColor: currentProject.color4,
           lightTextColor: currentProject.color2,
+          accentTextColor: currentProject.color5,
+        );
+        projectDetail = ProjectDetail(
+          darkTextColor: currentProject.color5,
+          lightTextColor: currentProject.color1,
         );
         debugPrint('${currentProject.projectName} HAS BEEN INITIALIZED!!!');
         currentProjectName = currentProject.projectName.split(' ');
       }
     }
+    list = [
+      ProjectSlide1(
+        currentProject: currentProject,
+        currentProjectName: currentProjectName,
+        projectBrief: projectBrief,
+      ),
+      ProjectSlide2(
+        currentProject: currentProject,
+      ),
+      ProjectSlide3(
+        currentProject: currentProject,
+        projectDetail: projectDetail,
+      ),
+      ProjectSlide4(
+        currentProject: currentProject,
+      ),
+    ];
     return Material(
       child: SingleChildScrollView(
         child: Stack(
@@ -50,25 +80,7 @@ class MarilouLaundry extends StatelessWidget {
                   ),
                   //PROJECT CAROUSEL SECTION
                   Stack(alignment: AlignmentDirectional.center, children: [
-                    ProjectSlide1(
-                      currentProject: currentProject,
-                      currentProjectName: currentProjectName,
-                      projectBrief: projectBrief,
-                      slideBGColor: currentProject.color1,
-                    ),
-                    Positioned(
-                      bottom: 20,
-                      width: 960,
-                      // left: 20,
-                      // right: 20,
-                      child: Container(
-                        // width: 960,
-                        height: 20,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+                    CarouselDemo(widgetList: list),
                   ]),
                   //PROJECT BLOG SECTION
                   ProjectBlog(

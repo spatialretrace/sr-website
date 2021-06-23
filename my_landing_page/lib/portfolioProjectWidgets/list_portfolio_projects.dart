@@ -68,7 +68,7 @@ final List<Project> projects = [
   ),
   Project(
     previewImage: 'projectAssets/Marilou/preview_Marilou.png',
-    hoverImage: 'projectAssets/Marilou/hover_Marilou.png',
+    hoverImage: 'projectAssets/Marilou/hover_Marilou.jpeg',
     designCategory: [
       'Illustration',
       'Children\'s Book',
