@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/pages/00_landing_page/hi_intro.dart';
 
-import 'dart:ui' as ui;
-
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

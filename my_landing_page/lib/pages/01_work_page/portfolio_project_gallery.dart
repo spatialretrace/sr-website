@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/list_portfolio_projects.dart';
 import 'package:my_landing_page/extensions/hover_extensions.dart';

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_landing_page/widgets/web_nav.dart';
 import 'package:flutter/rendering.dart';
-import 'dart:ui' as ui;
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({

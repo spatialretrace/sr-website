@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Text/project_blog.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Text/project_brief.dart';
 import 'package:my_landing_page/portfolioProjectWidgets/Vendor_Van/Text/project_detail.dart';
@@ -18,9 +17,9 @@ List<Widget> list = [];
 
 class MyVendorVan extends StatelessWidget {
   @override
-  final Color homeBGback = Colors.amber;
-  final Color homeBGfront = Colors.black;
   Widget build(BuildContext context) {
+    final Color homeBGback = Colors.amber;
+    final Color homeBGfront = Colors.black;
     final double width = MediaQuery.of(context).size.width;
     Project currentProject;
     Widget projectBrief;

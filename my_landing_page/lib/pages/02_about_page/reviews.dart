@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_landing_page/widgets/left_SR_button.dart';
 import 'package:my_landing_page/pages/02_about_page/review_list.dart';
 
-import 'dart:ui' as ui;
-
 import 'package:my_landing_page/widgets/right_SR_button.dart';
 
 class Reviews extends StatefulWidget {

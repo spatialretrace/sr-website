@@ -8,8 +8,7 @@ class CarouselDemo extends StatelessWidget {
   }) : super(key: key);
 
   final List<Widget> widgetList;
-
-  CarouselController buttonCarouselController = CarouselController();
+  final CarouselController buttonCarouselController = CarouselController();
 
   @override
   Widget build(BuildContext context) {

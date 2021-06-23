@@ -8,10 +8,9 @@ import 'package:my_landing_page/widgets/web_nav.dart';
 
 class ContactPage extends StatelessWidget {
   @override
-  final Color homeBGback = Colors.amber;
-  final Color homeBGfront = Colors.black;
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
+    final Color homeBGback = Colors.amber;
+    final Color homeBGfront = Colors.black;
     final double height = MediaQuery.of(context).size.height;
     return Material(
       child: SingleChildScrollView(

@@ -7,9 +7,9 @@ import 'package:my_landing_page/widgets/web_BG.dart';
 
 class WorkPage extends StatelessWidget {
   @override
-  final Color homeBGback = Colors.amber;
-  final Color homeBGfront = Colors.black;
   Widget build(BuildContext context) {
+    final Color homeBGback = Colors.amber;
+    final Color homeBGfront = Colors.black;
     final double width = MediaQuery.of(context).size.width;
     return Material(
       child: SingleChildScrollView(
